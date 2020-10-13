@@ -12,7 +12,7 @@
 // libraries
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+#include <Windows.h> // to play sound when game ends
 
 // declare
 // An array that represents the game board
@@ -56,10 +56,12 @@ int main()
     if (playerWin >= 0)
     {
         printf("The game is over!  Player %d Wins!", playerWin);
+        MessageBeep(MB_ICONWARNING);
     }
     else
     {
         printf("The game has ended in a draw!");
+        MessageBeep(MB_ICONWARNING);
     }
 
     return 0;
